@@ -1,0 +1,12 @@
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\bin\Debug\Monthly Breakdown Analyser.exe.config
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\bin\Debug\Monthly Breakdown Analyser.exe
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\bin\Debug\Monthly Breakdown Analyser.pdb
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\bin\Debug\Monthly Breakdown Analyser.xml
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly Breakdown Analyser.vbprojAssemblyReference.cache
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly_Breakdown_Analyser.Form1.resources
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly_Breakdown_Analyser.Resources.resources
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly Breakdown Analyser.vbproj.GenerateResource.cache
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly Breakdown Analyser.vbproj.CoreCompileInputs.cache
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly Breakdown Analyser.exe
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly Breakdown Analyser.xml
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly Breakdown Analyser.pdb
