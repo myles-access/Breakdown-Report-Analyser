@@ -27,6 +27,7 @@ Partial Class Form1
         Me.fileSelectButton = New System.Windows.Forms.Button()
         Me.fileLabel = New System.Windows.Forms.Label()
         Me.OpenFileDialog = New System.Windows.Forms.OpenFileDialog()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'runButton
@@ -64,12 +65,22 @@ Partial Class Form1
         '
         Me.OpenFileDialog.FileName = "OpenFileDialog1"
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(32, 194)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 27)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "close xl"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 22.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(478, 376)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.fileLabel)
         Me.Controls.Add(Me.fileSelectButton)
         Me.Controls.Add(Me.runButton)
@@ -88,4 +99,5 @@ Partial Class Form1
     Friend WithEvents fileSelectButton As Button
     Friend WithEvents fileLabel As Label
     Friend WithEvents OpenFileDialog As OpenFileDialog
+    Friend WithEvents Button1 As Button
 End Class
