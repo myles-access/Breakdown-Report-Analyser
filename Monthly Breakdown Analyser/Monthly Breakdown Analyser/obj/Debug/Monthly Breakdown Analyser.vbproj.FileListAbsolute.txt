@@ -10,3 +10,4 @@ C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakd
 C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly Breakdown Analyser.exe
 C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly Breakdown Analyser.xml
 C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly Breakdown Analyser.pdb
+C:\Git Repos\Breakdown Report Analyser\Monthly Breakdown Analyser\Monthly Breakdown Analyser\obj\Debug\Monthly Breakdown Analyser.vbproj.ResolveComReference.cache
