@@ -10,20 +10,25 @@ Public Class Form1
     Dim loopChecker2 As Boolean = False
     Dim run1Row As Integer = 1
     Dim run1Cell As String
-    Dim run1Addresses() As String
-    Dim run1numbers() As Integer
+    Dim run1Addresses(500) As String
+    Dim run1numbers(9999999) As Integer
     Dim run2Row As Integer = 1
     Dim run2Cell As String
-    Dim run2Addresses() As String
-    Dim run2numbers() As Integer
+    Dim run2Addresses(9999999) As String
+    Dim run2numbers(9999999) As Integer
     Dim run3Row As Integer = 1
     Dim run3Cell As String
-    Dim run3Addresses() As String
-    Dim run3numbers() As Integer
+    Dim run3Addresses(9999999) As String
+    Dim run3numbers(9999999) As Integer
     Dim run4Row As Integer = 1
     Dim run4Cell As String
-    Dim run4Addresses() As String
-    Dim run4numbers() As Integer
+    Dim run4Addresses(9999999) As String
+    Dim run4numbers(9999999) As Integer
+
+    Dim cell As String
+    Dim i As Integer = 0
+    Dim i2 As Integer = 0
+    Dim cell2 As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -50,6 +55,7 @@ Public Class Form1
                 End If
                 run1Row += 1
             Loop
+
             ResetVarsForLoops()
             Do While loopCheker = False
                 run2Cell = ("A" & run2Row)
@@ -61,6 +67,7 @@ Public Class Form1
                 End If
                 run2Row += 1
             Loop
+
             ResetVarsForLoops()
             Do While loopCheker = False
                 run3Cell = ("A" & run3Row)
@@ -72,6 +79,7 @@ Public Class Form1
                 End If
                 run3Row += 1
             Loop
+
             ResetVarsForLoops()
             Do While loopCheker = False
                 run4Cell = ("A" & run4Row)
@@ -84,113 +92,115 @@ Public Class Form1
                 run4Row += 1
             Loop
 
-
+            MsgBox(run1Row & run3Row & run3Row & run4Row)
 
             ResetVarsForLoops()
             Do While loopCheker = False
-                Dim cell As String
-                Dim i As Integer = 0
 
                 cell = ("B" & run1Row + i)
                 If run1Row + i >= run2Row Then
                     loopCheker = True
-                ElseIf xlWorkSheet.Range(cell).Value <> "" Then
-                    Dim i2 As Integer = 0
-                    Dim cell2 As String
+                ElseIf xlWorkSheet.Range(cell).ToString <> "" Then
 
-                    run1Addresses(i) = xlWorkSheet.Range(cell).Value
-                    Do While loopCheker = False
-                        cell2 = ("C" & run2Row + i2)
-                        If xlWorkSheet.Range(cell2).Value <> "" Then
-                            run1numbers(i) += 1
+                    run1Addresses(i) = xlWorkSheet.Range(cell).ToString
+                    Do While loopChecker2 = False
+                        cell2 = ("C" & run1Row + i2)
+                        If xlWorkSheet.Range(cell2).ToString = "Run 1" Or xlWorkSheet.Range(cell2).ToString = "Run 2" Or xlWorkSheet.Range(cell2).ToString = "Run 3" Or xlWorkSheet.Range(cell2).ToString = "Run 4" Then
+                            loopChecker2 = True
                         ElseIf i2 >= run2Row Then
                             loopChecker2 = True
+                        ElseIf xlWorkSheet.Range(cell2).ToString <> "" Then
+                            run1numbers(i) += 1
                         End If
                         i2 += 1
                     Loop
                 End If
                 i += 1
             Loop
+
             ResetVarsForLoops()
             Do While loopCheker = False
-                Dim cell As String
-                Dim i As Integer = 0
 
                 cell = ("B" & run2Row + i)
                 If run2Row + i >= run3Row Then
                     loopCheker = True
-                ElseIf xlWorkSheet.Range(cell).Value <> "" Then
-                    Dim i2 As Integer = 0
-                    Dim cell2 As String
+                ElseIf xlWorkSheet.Range(cell).ToString <> "" Then
 
-                    run2Addresses(i) = xlWorkSheet.Range(cell).Value
+                    run2Addresses(i) = xlWorkSheet.Range(cell).ToString
                     Do While loopChecker2 = False
                         cell2 = ("C" & run2Row + i2)
-                        If xlWorkSheet.Range(cell2).Value <> "" Then
-                            run2numbers(i) += 1
+                        If xlWorkSheet.Range(cell2).ToString = "Run 1" Or xlWorkSheet.Range(cell2).ToString = "Run 2" Or xlWorkSheet.Range(cell2).ToString = "Run 3" Or xlWorkSheet.Range(cell2).ToString = "Run 4" Then
+                            loopChecker2 = True
                         ElseIf i2 >= run3Row Then
                             loopChecker2 = True
+                        ElseIf xlWorkSheet.Range(cell2).ToString <> "" Then
+                            run2numbers(i) += 1
                         End If
                         i2 += 1
                     Loop
                 End If
                 i += 1
             Loop
+
             ResetVarsForLoops()
             Do While loopCheker = False
-                Dim cell As String
-                Dim i As Integer = 0
 
                 cell = ("B" & run3Row + i)
                 If run3Row + i >= run4Row Then
                     loopCheker = True
-                ElseIf xlWorkSheet.Range(cell).Value <> "" Then
-                    Dim i2 As Integer = 0
-                    Dim cell2 As String
+                ElseIf xlWorkSheet.Range(cell).ToString <> "" Then
 
-                    run3Addresses(i) = xlWorkSheet.Range(cell).Value
+                    run3Addresses(i) = xlWorkSheet.Range(cell).ToString
                     Do While loopChecker2 = False
                         cell2 = ("C" & run3Row + i2)
-                        If xlWorkSheet.Range(cell2).Value <> "" Then
-                            run3numbers(i) += 1
+                        If xlWorkSheet.Range(cell2).ToString = "Run 1" Or xlWorkSheet.Range(cell2).ToString = "Run 2" Or xlWorkSheet.Range(cell2).ToString = "Run 3" Or xlWorkSheet.Range(cell2).ToString = "Run 4" Then
+                            loopChecker2 = True
                         ElseIf i2 >= run4Row Then
                             loopChecker2 = True
+                        ElseIf xlWorkSheet.Range(cell2).ToString <> "" Then
+                            run3numbers(i) += 1
                         End If
                         i2 += 1
                     Loop
                 End If
                 i += 1
             Loop
+
             ResetVarsForLoops()
             Do While loopCheker = False
-                Dim cell As String
-                Dim i As Integer = 0
 
                 cell = ("B" & run4Row + i)
                 If run4Row + i >= 1000 Then
                     loopCheker = True
-                ElseIf xlWorkSheet.Range(cell).Value <> "" Then
-                    Dim i2 As Integer = 0
-                    Dim cell2 As String
+                ElseIf xlWorkSheet.Range(cell).ToString <> "" Then
 
-                    run4Addresses(i) = xlWorkSheet.Range(cell).Value
+                    run4Addresses(i) = xlWorkSheet.Range(cell).ToString
                     Do While loopChecker2 = False
-                        cell2 = ("C" & run2Row + i2)
-                        If xlWorkSheet.Range(cell2).Value <> "" Then
-                            run4numbers(i) += 1
+                        cell2 = ("C" & run4Row + i2)
+                        If xlWorkSheet.Range(cell2).ToString = "Run 1" Or xlWorkSheet.Range(cell2).ToString = "Run 2" Or xlWorkSheet.Range(cell2).ToString = "Run 3" Or xlWorkSheet.Range(cell2).ToString = "Run 4" Then
+                            loopChecker2 = True
                         ElseIf i2 >= 1000 Then
                             loopChecker2 = True
+                        ElseIf xlWorkSheet.Range(cell2).ToString <> "" Then
+                            run4numbers(i) += 1
                         End If
                         i2 += 1
                     Loop
                 End If
+                i += 1
             Loop
+
 
             xlWorkBook.Close()
             xlApp.Quit()
             releaseObject(xlApp)
             releaseObject(xlWorkBook)
             releaseObject(xlWorkSheet)
+
+            MsgBox(run1Addresses.Length.ToString)
+            MsgBox(run2Addresses.Length.ToString)
+            MsgBox(run3Addresses.Length.ToString)
+            MsgBox(run4Addresses.Length.ToString)
 
             runButton.BackColor = Color.LightGreen
         Else
@@ -236,14 +246,18 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        xlWorkBook.Close()
-        xlApp.Quit()
+        ' xlWorkBook.Close()
+        'xlApp.Quit()
     End Sub
 
     Private Sub ResetVarsForLoops()
         loopCheker = False
         loopChecker2 = False
         int = -1
+        cell = ""
+        cell2 = ""
+        i = 0
+        i2 = 0
     End Sub
 
 End Class
