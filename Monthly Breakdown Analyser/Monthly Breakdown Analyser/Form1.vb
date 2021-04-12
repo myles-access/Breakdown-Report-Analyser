@@ -104,13 +104,17 @@ Public Class Form1
 
                     Do While loopChecker2 = False
                         cell2 = ("C" & run1Row + i2)
-                        If xlWorkSheet.Range(cell2).ToString = "Run 1" Or xlWorkSheet.Range(cell2).ToString = "Run 2" Or xlWorkSheet.Range(cell2).ToString = "Run 3" Or xlWorkSheet.Range(cell2).ToString = "Run 4" Then
+                        If xlWorkSheet.Range(cell2).ToString = "Run 2" Or
+                            xlWorkSheet.Range(cell2).ToString = "Run 3" Or
+                            xlWorkSheet.Range(cell2).ToString = "Run 4" Or
+                            xlWorkSheet.Range("B" & run1Row + i2).ToString <> "" Or
+                            i2 + run1Row >= run2Row Then
                             loopChecker2 = True
-                        ElseIf i2 >= run2Row Then
-                            loopChecker2 = True
+
                         ElseIf xlWorkSheet.Range(cell2).ToString <> "" Then
                             ReDim Preserve run1numbers(run1numbers.Length + 1)
                             run1numbers(i) += 1
+
                         End If
                         i2 += 1
                     Loop
@@ -130,10 +134,12 @@ Public Class Form1
 
                     Do While loopChecker2 = False
                         cell2 = ("C" & run2Row + i2)
-                        If xlWorkSheet.Range(cell2).ToString = "Run 1" Or xlWorkSheet.Range(cell2).ToString = "Run 2" Or xlWorkSheet.Range(cell2).ToString = "Run 3" Or xlWorkSheet.Range(cell2).ToString = "Run 4" Then
+                        If xlWorkSheet.Range(cell2).ToString = "Run 3" Or
+                            xlWorkSheet.Range(cell2).ToString = "Run 4" Or
+                            xlWorkSheet.Range("B" & run2Row + i2).ToString <> "" Or
+                            i2 + run2Row >= run3Row Then
                             loopChecker2 = True
-                        ElseIf i2 >= run3Row Then
-                            loopChecker2 = True
+
                         ElseIf xlWorkSheet.Range(cell2).ToString <> "" Then
                             ReDim Preserve run2numbers(run2numbers.Length + 1)
                             run2numbers(i) += 1
@@ -156,10 +162,11 @@ Public Class Form1
 
                     Do While loopChecker2 = False
                         cell2 = ("C" & run3Row + i2)
-                        If xlWorkSheet.Range(cell2).ToString = "Run 1" Or xlWorkSheet.Range(cell2).ToString = "Run 2" Or xlWorkSheet.Range(cell2).ToString = "Run 3" Or xlWorkSheet.Range(cell2).ToString = "Run 4" Then
+                        If xlWorkSheet.Range(cell2).ToString = "Run 4" Or
+                            xlWorkSheet.Range("B" & run3Row + i2).ToString <> "" Or
+                            i2 + run3Row >= run4Row Then
                             loopChecker2 = True
-                        ElseIf i2 >= run4Row Then
-                            loopChecker2 = True
+
                         ElseIf xlWorkSheet.Range(cell2).ToString <> "" Then
                             ReDim Preserve run3numbers(run3numbers.Length + 1)
                             run3numbers(i) += 1
@@ -182,10 +189,10 @@ Public Class Form1
 
                     Do While loopChecker2 = False
                         cell2 = ("C" & run4Row + i2)
-                        If xlWorkSheet.Range(cell2).ToString = "Run 1" Or xlWorkSheet.Range(cell2).ToString = "Run 2" Or xlWorkSheet.Range(cell2).ToString = "Run 3" Or xlWorkSheet.Range(cell2).ToString = "Run 4" Then
+                        If xlWorkSheet.Range("B" & run4Row + i2).ToString <> "" Or
+                            i2 + run4Row >= 1000 Then
                             loopChecker2 = True
-                        ElseIf i2 >= 1000 Then
-                            loopChecker2 = True
+
                         ElseIf xlWorkSheet.Range(cell2).ToString <> "" Then
                             ReDim Preserve run4numbers(run4numbers.Length + 1)
                             run4numbers(i) += 1
@@ -196,17 +203,11 @@ Public Class Form1
                 i += 1
             Loop
 
-
             xlWorkBook.Close()
             xlApp.Quit()
             releaseObject(xlApp)
             releaseObject(xlWorkBook)
             releaseObject(xlWorkSheet)
-
-            'MsgBox(run1Addresses.Length.ToString)
-            'MsgBox(run2Addresses.Length.ToString)
-            'MsgBox(run3Addresses.Length.ToString)
-            'MsgBox(run4Addresses.Length.ToString)
 
             runButton.BackColor = Color.LightGreen
 
@@ -258,10 +259,10 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         ' xlWorkBook.Close()
         'xlApp.Quit()
-        MsgBox("Run 1 lenghths " & run1Addresses.Length & " " & run1numbers.Length &
-               "Run 2 lenghths " & run2Addresses.Length & " " & run2numbers.Length &
-               "Run 3 lenghths " & run3Addresses.Length & " " & run3numbers.Length &
-               "Run 4 lenghths " & run4Addresses.Length & " " & run4numbers.Length)
+        MsgBox("Run 1 lenghths " & run1Addresses.Length & " & " & run1numbers.Length &
+               " Run 2 lenghths " & run2Addresses.Length & " & " & run2numbers.Length &
+               " Run 3 lenghths " & run3Addresses.Length & " & " & run3numbers.Length &
+               " Run 4 lenghths " & run4Addresses.Length & " & " & run4numbers.Length)
     End Sub
 
     Private Sub ResetVarsForLoops()
@@ -274,21 +275,5 @@ Public Class Form1
         i = 0
         i2 = 0
     End Sub
-
-    'Private Sub RedimStringArray(sentArray() As String)
-    '    Dim arrayLength As Integer
-    '    arrayLength = sentArray.Length + 1
-
-    '    'ReDim Preserve sentArray(arrayLength)
-    '    ReDim Preserve sentArray(500)
-    'End Sub
-
-    'Private Sub RedimIntegerArray(sentArray() As Integer)
-    '    Dim arrayLength As Integer
-    '    arrayLength = sentArray.Length + 1
-
-    '    'ReDim Preserve sentArray(arrayLength)
-    '    ReDim Preserve sentArray(500)
-    'End Sub
 
 End Class
